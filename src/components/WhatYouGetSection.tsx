@@ -75,6 +75,8 @@ const WhatYouGetSection = () => {
               loading="eager"
               decoding="async"
               fetchPriority="high"
+              width={1024}
+              height={1024}
               className="w-full h-auto object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
