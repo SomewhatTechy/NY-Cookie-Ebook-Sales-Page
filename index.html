@@ -27,18 +27,18 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=optional"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=optional"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=optional"
       />
     </noscript>
 
@@ -117,14 +117,15 @@
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1842006253129669&ev=PageView&noscript=1"
     /></noscript>
-    <div id="root">
-      <!-- Static LCP placeholder: paints before React hydrates, removed on mount -->
+    <!-- LCP placeholder: lives OUTSIDE #root so React can't destroy it -->
+    <div id="lcp-placeholder" style="position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none">
       <div style="max-width:672px;margin:0 auto;padding:2rem 1rem 0;text-align:center">
         <img src="https://vumbnail.com/1158037210.jpg" alt="Video" width="672" height="378"
           fetchpriority="high" decoding="async"
           style="width:100%;height:auto;border-radius:1rem;aspect-ratio:16/9;object-fit:cover" />
       </div>
     </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

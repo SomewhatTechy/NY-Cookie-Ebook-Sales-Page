@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowRight, Download, Sparkles, ShieldCheck, Cookie, DollarSign, Clock, Zap, Play } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface HeroSectionProps {
   checkoutUrl: string;
@@ -9,6 +9,11 @@ interface HeroSectionProps {
 const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
   const { t, language } = useLanguage();
   const [videoLoaded, setVideoLoaded] = useState(false);
+
+  // Remove the static LCP placeholder once React paints
+  useEffect(() => {
+    document.getElementById('lcp-placeholder')?.remove();
+  }, []);
 
   const videoIds: Record<string, string> = {
     en: '1158037210?h=4249ce421e',
