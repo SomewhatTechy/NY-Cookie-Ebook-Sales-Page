@@ -1,5 +1,4 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { motion } from 'framer-motion';
 import { ShieldCheck, ArrowRight, CheckCircle } from 'lucide-react';
 
 interface GuaranteeSectionProps {
@@ -25,34 +24,26 @@ const GuaranteeSection = ({ checkoutUrl }: GuaranteeSectionProps) => {
               </div>
             </div>
 
-            <div className="text-center md:text-left flex-1">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chocolate">
-                  {t('guaranteeTitle')}
-                </h2>
-                <p className="text-gold font-semibold mb-4">
-                  {t('guaranteeSubtitle')}
-                </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {t('guaranteeText')}
-                </p>
+            <div className="text-center md:text-left flex-1 animate-fade-in">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 text-chocolate">
+                {t('guaranteeTitle')}
+              </h2>
+              <p className="text-gold font-semibold mb-4">
+                {t('guaranteeSubtitle')}
+              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                {t('guaranteeText')}
+              </p>
 
-                <motion.a
-                  href={checkoutUrl}
-                  onClick={goCheckout}
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="cta-button inline-flex justify-center"
-                  aria-label={t('guaranteeCta')}
-                >
-                  {t('guaranteeCta')}
-                  <ArrowRight className="w-5 h-5" />
-                </motion.a>
-              </motion.div>
+              <a
+                href={checkoutUrl}
+                onClick={goCheckout}
+                className="cta-button inline-flex justify-center hover:scale-105 active:scale-95 transition-transform"
+                aria-label={t('guaranteeCta')}
+              >
+                {t('guaranteeCta')}
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>

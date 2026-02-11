@@ -2,7 +2,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useOfferCountdown } from "@/hooks/useOfferCountdown";
 import { useMemo, useState, useEffect } from "react";
 import { Clock, ArrowRight, Cookie } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface StickyUrgencyBarProps {
   checkoutUrl: string;
@@ -74,48 +73,40 @@ const StickyUrgencyBar = ({ checkoutUrl }: StickyUrgencyBarProps) => {
   };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.header
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed top-0 left-0 w-full z-50 border-b border-white/10 shadow-lg"
-          style={{ background: "rgba(59, 36, 29, 0.92)", backdropFilter: "blur(12px)" }}
-          aria-label="Sticky urgency bar"
-        >
-          <div className="container mx-auto py-2 px-4">
-            <div className="flex items-center justify-between gap-2 text-white">
-              <div className="flex items-center gap-2" aria-live="polite">
-                <Clock className="w-4 h-4 text-gold animate-pulse hidden sm:block" />
-                <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2">
-                  <span className="text-xs text-white/70 hidden sm:inline">
-                    {safe.priceIncreasesTo}
-                  </span>
-                  <span className="sr-only">{safe.offerEndsIn}</span>
-                  <div className="flex items-center gap-1 text-gold font-bold tabular-nums">
-                    <span>{hh}</span>:<span>{mm}</span>:<span>{ss}</span>
-                  </div>
-                </div>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 border-b border-white/10 shadow-lg transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      style={{ background: "rgba(59, 36, 29, 0.92)", backdropFilter: "blur(12px)" }}
+      aria-label="Sticky urgency bar"
+    >
+      <div className="container mx-auto py-2 px-4">
+        <div className="flex items-center justify-between gap-2 text-white">
+          <div className="flex items-center gap-2" aria-live="polite">
+            <Clock className="w-4 h-4 text-gold animate-pulse hidden sm:block" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2">
+              <span className="text-xs text-white/70 hidden sm:inline">
+                {safe.priceIncreasesTo}
+              </span>
+              <span className="sr-only">{safe.offerEndsIn}</span>
+              <div className="flex items-center gap-1 text-gold font-bold tabular-nums">
+                <span>{hh}</span>:<span>{mm}</span>:<span>{ss}</span>
               </div>
-
-              <a
-                href={checkoutUrl}
-                onClick={goCheckout}
-                className="flex items-center gap-1 px-4 py-1.5 rounded-full text-sm font-semibold transition-all hover:scale-105"
-                style={{ background: "var(--gradient-cta)", color: "hsl(var(--chocolate))" }}
-                aria-label={safe.stickyCtaText}
-              >
-                <span className="hidden sm:inline">{safe.stickyCtaText}</span>
-                <Cookie className="h-5 w-5 sm:hidden text-gold-light" />
-                <ArrowRight className="w-3 h-3" />
-              </a>
             </div>
           </div>
-        </motion.header>
-      )}
-    </AnimatePresence>
+
+          <a
+            href={checkoutUrl}
+            onClick={goCheckout}
+            className="flex items-center gap-1 px-4 py-1.5 rounded-full text-sm font-semibold transition-all hover:scale-105"
+            style={{ background: "var(--gradient-cta)", color: "hsl(var(--chocolate))" }}
+            aria-label={safe.stickyCtaText}
+          >
+            <span className="hidden sm:inline">{safe.stickyCtaText}</span>
+            <Cookie className="h-5 w-5 sm:hidden text-gold-light" />
+            <ArrowRight className="w-3 h-3" />
+          </a>
+        </div>
+      </div>
+    </header>
   );
 };
 
