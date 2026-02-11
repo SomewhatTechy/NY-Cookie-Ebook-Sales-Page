@@ -49,7 +49,7 @@ const BonusesSection = () => {
                 </span>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold text-foreground mb-1">{bonus.title}</h4>
+                <h3 className="text-lg font-bold text-foreground mb-1">{bonus.title}</h3>
                 <p className="text-muted-foreground text-sm">{bonus.desc}</p>
               </div>
               <div className="flex-shrink-0">
@@ -62,7 +62,7 @@ const BonusesSection = () => {
         {/* Total Value Banner */}
         <div className="max-w-2xl mx-auto p-6 rounded-2xl premium-card bg-gold/10 border border-gold/25 text-center animate-scale-in">
           <p className="text-xl md:text-2xl font-semibold text-foreground">
-            {t('totalBonusValue')}: <span className="text-gold font-bold">{t('bonusesTotalAmount')}</span> — {t('freeToday')}
+            {t('totalBonusValue')}: <span className="text-gold-dark font-bold">{t('bonusesTotalAmount')}</span> — {t('freeToday')}
           </p>
         </div>
       </div>

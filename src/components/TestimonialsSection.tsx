@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-1 mb-3" aria-label="5-star rating">
+                <div className="flex gap-1 mb-3" role="img" aria-label="5-star rating">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                   ))}
