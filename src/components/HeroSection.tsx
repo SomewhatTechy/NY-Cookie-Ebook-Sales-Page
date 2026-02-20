@@ -16,34 +16,35 @@ const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
   }, []);
 
   const videoIds: Record<string, string> = {
-    en: '1158037210?h=4249ce421e',
-    es: '1158037171?h=df4275b618',
-    pt: '1158037115?h=9900e5749a',
+    en: 'ye-XMR5P_Bg',
+    es: '0FavcY4rjSg',
+    pt: 'tEEOnNoxg90',
   };
 
   const currentVideoId = videoIds[language] ?? videoIds.en;
 
   const videoTitleByLang: Record<string, string> = {
-    en: 'Video',
-    es: 'Video',
-    pt: 'Vídeo',
+    en: 'How to Start Selling New York-Style Cookies From Home',
+    es: 'Cómo Empezar a Vender Galletas Estilo Nueva York Desde Casa',
+    pt: 'Como Começar a Vender Cookies Estilo Nova York em Casa',
   };
   const videoTitle = videoTitleByLang[language] ?? videoTitleByLang.en;
 
-  // Build Vimeo URL - use ? or & depending on whether videoId already has query params
-  const separator = currentVideoId.includes('?') ? '&' : '?';
-  const vimeoSrc =
-    `https://player.vimeo.com/video/${currentVideoId}` +
-    `${separator}autoplay=1&muted=1&loop=1&autopause=0&playsinline=1` +
-    `&title=0&byline=0&portrait=0&dnt=1`;
+  // YouTube embed URL — no autoplay (manual play converts better on cold traffic)
+  const youtubeSrc =
+    `https://www.youtube.com/embed/${currentVideoId}` +
+    `?rel=0&modestbranding=1&playsinline=1`;
 
-  // Extract just the numeric ID for vumbnail (strip query params)
-  const numericVideoId = currentVideoId.split('?')[0];
-  const vimeoThumb = `https://vumbnail.com/${numericVideoId}.jpg`;
+  // YouTube thumbnail (maxresdefault for high quality, fallback to hqdefault)
+  const youtubeThumb = `https://img.youtube.com/vi/${currentVideoId}/maxresdefault.jpg`;
 
   const goCheckout = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.location.assign(checkoutUrl);
+    if (typeof (window as any).trackInitiateCheckout === 'function') {
+      (window as any).trackInitiateCheckout(checkoutUrl);
+    } else {
+      window.location.assign(checkoutUrl);
+    }
   };
 
   // Effort minimizers data with icons
@@ -109,10 +110,10 @@ const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
                   <iframe
                     key={currentVideoId}
                     className="w-full h-full"
-                    src={vimeoSrc}
+                    src={youtubeSrc}
                     title={videoTitle}
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allow="autoplay; fullscreen; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                 ) : (
@@ -123,7 +124,7 @@ const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
                     aria-label={`${t('watchVideoPrompt')} - ${videoTitle}`}
                   >
                     <img
-                      src={vimeoThumb}
+                      src={youtubeThumb}
                       alt={videoTitle}
                       className="w-full h-full object-cover"
                       loading="eager"

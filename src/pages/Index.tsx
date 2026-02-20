@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
 import { LanguageProvider, useLanguage } from '@/contexts/LanguageContext';
-import { useOfferCountdown } from '@/hooks/useOfferCountdown';
 import LanguageToggle from '@/components/LanguageToggle';
 import StickyUrgencyBar from '@/components/StickyUrgencyBar';
 import FloatingCTA from '@/components/FloatingCTA';
@@ -22,18 +21,11 @@ const Footer = lazy(() => import('@/components/Footer'));
 
 type LangKey = 'en' | 'es' | 'pt';
 
-// Checkout URLs: Launch price ($6.97) - active during countdown
-const CHECKOUT_URLS_LAUNCH: Record<LangKey, string> = {
+// Checkout URLs: Single price ($6.97) for all visitors
+const CHECKOUT_URLS: Record<LangKey, string> = {
   en: 'https://pay.hotmart.com/U104053904F?off=wkl6rja2&checkoutMode=10',
   es: 'https://pay.hotmart.com/M104071921A?off=leny9hwp&checkoutMode=10',
   pt: 'https://pay.hotmart.com/F104072332S?off=9ha4yghn&checkoutMode=10',
-};
-
-// Checkout URLs: Regular price ($27.00) - after timer expires
-const CHECKOUT_URLS_REGULAR: Record<LangKey, string> = {
-  en: 'https://pay.hotmart.com/U104053904F?off=n06q2grn&checkoutMode=10',
-  es: 'https://pay.hotmart.com/M104071921A?off=nw46w8wm&checkoutMode=10',
-  pt: 'https://pay.hotmart.com/F104072332S?off=ecdxpg1v&checkoutMode=10',
 };
 
 function normalizeLanguageToKey(language: unknown): LangKey {
@@ -45,19 +37,13 @@ function normalizeLanguageToKey(language: unknown): LangKey {
 
 const PageContent = () => {
   const { language } = useLanguage();
-  const { isExpired } = useOfferCountdown();
 
   const langKey = normalizeLanguageToKey(language);
-
-  // Switch checkout URL based on timer state
-  const checkoutUrl = isExpired
-    ? CHECKOUT_URLS_REGULAR[langKey]
-    : CHECKOUT_URLS_LAUNCH[langKey];
+  const checkoutUrl = CHECKOUT_URLS[langKey];
 
   return (
     <div className="min-h-screen premium-page text-foreground">
-      {/* Hide sticky urgency bar when offer expired */}
-      {!isExpired && <StickyUrgencyBar checkoutUrl={checkoutUrl} />}
+      <StickyUrgencyBar checkoutUrl={checkoutUrl} />
       <LanguageToggle />
       <FloatingCTA checkoutUrl={checkoutUrl} />
 

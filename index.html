@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aprende a Crear Postres Caseros y Emprende | Ebook Digital</title>
+    <title>Bake NY-Style Cookies and Start a Home Business | Digital Ebook</title>
 
     <!-- CRITICAL: preconnects first so browser opens connections ASAP -->
-    <link rel="preconnect" href="https://vumbnail.com" crossorigin />
+    <link rel="preconnect" href="https://img.youtube.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
-    <!-- Preload LCP image (Vimeo thumbnail) to eliminate render delay -->
-    <link rel="preload" as="image" href="https://vumbnail.com/1158037210.jpg" fetchpriority="high" />
+    <!-- Preload LCP image (YouTube thumbnail) to eliminate render delay -->
+    <link rel="preload" as="image" href="https://img.youtube.com/vi/ye-XMR5P_Bg/maxresdefault.jpg" fetchpriority="high" />
 
     <!-- Preload hero mockup – responsive: 384/512/768/1024 -->
     <link
@@ -45,30 +46,31 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="Descarga el ebook con 50+ recetas exclusivas de postres caseros. Aprende paso a paso y comienza tu negocio rentable desde casa. Acceso instantáneo."
+      content="Download the ebook with 27 viral NY-style cookie recipes. Learn step by step and start a profitable home baking business. Instant access."
     />
-    <meta name="author" content="Aprende en Casa" />
+    <meta name="author" content="NY Cookie Guide" />
     <meta
       name="keywords"
-      content="ebook postres, recetas caseras, negocio de postres, emprendimiento, brownies, postres sin horno"
+      content="cookie ebook, NY cookies, home baking business, cookie recipes, start baking business, cookie side hustle"
     />
-    <link rel="canonical" href="https://yourdomain.com/" />
+    <link rel="canonical" href="https://ny-cookie-ebook-sales-page.pages.dev/" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Ebook de Postres Caseros - Emprende Desde Casa" />
+    <meta property="og:title" content="NY-Style Cookie Ebook - Start a Home Baking Business" />
     <meta
       property="og:description"
-      content="50+ recetas exclusivas con paso a paso. Comienza tu negocio rentable hoy. 70% de descuento por tiempo limitado."
+      content="27 viral cookie recipes with step-by-step instructions. Start your profitable home baking business today."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.webp" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="pt_BR" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ebook de Postres Caseros - Emprende Desde Casa" />
-    <meta name="twitter:description" content="50+ recetas exclusivas. Comienza tu negocio rentable hoy." />
+    <meta name="twitter:title" content="NY-Style Cookie Ebook - Start a Home Baking Business" />
+    <meta name="twitter:description" content="27 viral cookie recipes. Start your home baking business today." />
     <meta name="twitter:image" content="/og-image.webp" />
 
     <!-- Structured data -->
@@ -76,11 +78,11 @@
       {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Ebook de Postres Caseros",
-        "description": "Guía completa con 50+ recetas exclusivas de postres caseros para emprender desde casa",
+        "name": "NY-Style Cookie Ebook",
+        "description": "Complete guide with 27 viral NY-style cookie recipes to start a profitable home baking business",
         "offers": {
           "@type": "Offer",
-          "price": "27",
+          "price": "6.97",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock"
         }
@@ -100,7 +102,28 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1842006253129669');
         fbq('track', 'PageView');
+
+        // ViewContent: fire once when user scrolls past the hero section
+        var vcFired = false;
+        function onScroll() {
+          if (vcFired) return;
+          if (window.scrollY > window.innerHeight * 0.5) {
+            vcFired = true;
+            fbq('track', 'ViewContent', { content_name: 'sales_page_engaged' });
+            window.removeEventListener('scroll', onScroll);
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
       });
+
+      // InitiateCheckout: called from React CTA buttons before navigating to Hotmart
+      window.trackInitiateCheckout = function(url) {
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', { content_name: 'checkout_click' });
+        }
+        // Small delay to let pixel fire before navigation
+        setTimeout(function() { window.location.assign(url); }, 150);
+      };
     </script>
     <!-- End Meta Pixel Code -->
 
@@ -120,7 +143,7 @@
     <!-- LCP placeholder: lives OUTSIDE #root so React can't destroy it -->
     <div id="lcp-placeholder" style="position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none">
       <div style="max-width:672px;margin:0 auto;padding:2rem 1rem 0;text-align:center">
-        <img src="https://vumbnail.com/1158037210.jpg" alt="Video" width="672" height="378"
+        <img src="https://img.youtube.com/vi/ye-XMR5P_Bg/maxresdefault.jpg" alt="Video" width="672" height="378"
           fetchpriority="high" decoding="async"
           style="width:100%;height:auto;border-radius:1rem;aspect-ratio:16/9;object-fit:cover" />
       </div>

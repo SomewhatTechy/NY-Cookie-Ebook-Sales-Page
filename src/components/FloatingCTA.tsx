@@ -23,7 +23,11 @@ const FloatingCTA = ({ checkoutUrl }: FloatingCTAProps) => {
 
   const goCheckout = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.location.assign(checkoutUrl);
+    if (typeof (window as any).trackInitiateCheckout === 'function') {
+      (window as any).trackInitiateCheckout(checkoutUrl);
+    } else {
+      window.location.assign(checkoutUrl);
+    }
   };
 
   if (!isVisible) return null;
