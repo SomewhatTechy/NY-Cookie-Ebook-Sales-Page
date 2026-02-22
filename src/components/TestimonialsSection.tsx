@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
   const doubled = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 bg-card fade-in-section" id="testimonials">
+    <section className="py-36 bg-card fade-in-section" id="testimonials">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="section-title">{title}</h2>
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
       </div>
 
       {/* Full-width carousel overflow container */}
-      <div className="relative overflow-hidden">
+      <div className="relative [overflow-x:clip] overflow-y-visible py-6">
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-card to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-card to-transparent" />
@@ -63,8 +63,7 @@ const TestimonialsSection = () => {
           {doubled.map((item, index) => (
             <div
               key={`${item.name}-${index}`}
-              className="flex-shrink-0 w-[220px] sm:w-[260px] md:w-[300px] overflow-hidden rounded-2xl drop-shadow-md transition-transform duration-300 hover:scale-[1.03]"
-              style={{ aspectRatio: "4 / 3" }}
+              className="flex-shrink-0 w-[220px] sm:w-[260px] md:w-[300px] transition-transform duration-300 hover:scale-[1.03]"
             >
               <img
                 src={`/testimonials/${language}/${item.file}?v=2`}
@@ -73,7 +72,7 @@ const TestimonialsSection = () => {
                 height={1024}
                 loading={index < 9 ? "eager" : "lazy"}
                 decoding="async"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-auto"
               />
             </div>
           ))}
