@@ -16,7 +16,7 @@ const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
   }, []);
 
   const videoIds: Record<string, string> = {
-    en: 'ye-XMR5P_Bg',
+    en: 's00J5kiTMqY',
     es: '0FavcY4rjSg',
     pt: 'tEEOnNoxg90',
   };
