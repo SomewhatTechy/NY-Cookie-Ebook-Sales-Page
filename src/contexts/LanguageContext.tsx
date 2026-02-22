@@ -161,7 +161,7 @@ const translations = {
     deviceCompatibility: "Compatible con movil, tableta y PC",
     
     // Testimonials
-    testimonialsTitle: "Reseñas de Alumnas de Varios Paises (traducidas)",
+    testimonialsTitle: "Mira Lo Que Dicen Otras Emprendedoras de Galletas",
     testimonialsSubtitle: "Mujeres como tu que empezaron a hornear y no pararon",
     testimonial1: "Hice mi primera venta en solo 3 dias! Las recetas son claras y el plan de ventas me dio la confianza que necesitaba. Ya tengo clientas que repiten.",
     testimonial2: "Nunca pense que podria vender mis galletas. Ahora recibo pedidos cada fin de semana y mis hijos estan orgullosos de su mama emprendedora.",
@@ -419,7 +419,7 @@ const translations = {
     deviceCompatibility: "Works on phone, tablet, and PC",
 
     // Testimonials
-    testimonialsTitle: "Student Reviews from Multiple Countries (translated)",
+    testimonialsTitle: "Look What Other Cookie Business Owners are Saying",
     testimonialsSubtitle: "Women like you who started baking and never looked back",
     testimonial1: "I made my first sale in just 3 days! The recipes are clear, and the sales plan gave me the confidence I needed. I am already getting repeat orders.",
     testimonial2: "I never thought I could sell my cookies. Now I get orders every weekend and my kids are proud of their entrepreneur mom.",
@@ -677,7 +677,7 @@ const translations = {
     deviceCompatibility: "Compativel com celular, tablet e PC",
 
     // Testimonials
-    testimonialsTitle: "Avaliacoes de Alunas de Varios Paises (traduzidas)",
+    testimonialsTitle: "Veja o Que Outras Empreendedoras de Cookies Estao Dizendo",
     testimonialsSubtitle: "Mulheres como voce que comecaram a assar e nao pararam mais",
     testimonial1: "Fiz minha primeira venda em apenas 3 dias! As receitas sao claras e o plano de vendas me deu a confianca que eu precisava. Ja tenho clientes que repetem.",
     testimonial2: "Nunca pensei que conseguiria vender meus cookies. Agora recebo pedidos todo fim de semana e meus filhos estao orgulhosos da mamae empreendedora.",
