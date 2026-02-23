@@ -32,6 +32,7 @@ const translations = {
     secureCheckoutHotmart: "Pago seguro con Hotmart",
 
     // Pain Points
+    painIdentity: "Hay dos tipos de mujeres que aman hornear: las que lo dejan como pasatiempo para siempre... y las que lo convierten en algo mas. Tu ya sabes cual quieres ser.",
     painEyebrow: "Te suena familiar?",
     painTitle: "Si te has preguntado esto, no estas sola...",
     painSubtitle: "Estas son las dudas y frustraciones mas comunes antes de lograr cookies gruesas, cremosas y vendibles.",
@@ -185,7 +186,7 @@ const translations = {
     countryAustralia: "Australia",
     
     // Guarantee (Stronger Risk Reversal - Hotmart accurate)
-    guaranteeTitle: "Garantia Blindada de 7 Dias",
+    guaranteeTitle: "La Garantia de la Primera Tanda",
     guaranteeSubtitle: "Tu No Arriesgas Nada",
     guaranteeText: "Descarga el ebook. Hornea las recetas. Sigue el plan. Si no sientes que puedes empezar tu negocio de galletas con confianza, solicita tu reembolso directamente en Hotmart - ellos lo procesan en 24-48 horas. Sin preguntas, sin complicaciones. Tu no arriesgas nada.",
     guaranteeCta: "Quiero mi copia ahora",
@@ -258,8 +259,15 @@ const translations = {
     finalBenefit5: "Garantia sin riesgo de 7 dias",
     finalCtaButton: "Quiero mi copia ahora",
     finalCtaNote: "Pago seguro - Acceso instantaneo - Garantia de 7 dias",
+    choiceTitle: "Tienes dos opciones ahora mismo:",
+    choiceA: "Cerrar esta pagina. Seguir viendo videos de reposteria. Decirte \"algun dia.\" En seis meses, nada ha cambiado.",
+    choiceB: "Empezar hoy por $6.97. Hornear tu primer lote esta noche. Compartirlas manana. El proximo fin de semana, la gente te pregunta como pedirte.",
+    choiceQuestion: "Cual suena mas como tu?",
+    finalCtaPS: "P.D. Cuando descargues, ve directo al Capitulo 3 - ahi esta la receta de galleta mas vendida. La mayoria de las mujeres hacen su primer lote esa misma noche.",
+    futurePacingTitle: "Imagina Esto...",
+    futurePacingText: "Es sabado por la manana. Tu cocina huele increible - chocolate caliente y vainilla llenando el aire. En la mesa, 36 galletas gruesas y cremosas se estan enfriando. Tu vecina ya te mando mensaje para reservar una caja. Tu hija se asoma y pregunta: \"Mama, podemos hacer las de crema de cacahuate?\" Subes una foto a Instagram, y antes del almuerzo, tres amigas preguntan como pedirte. Esto no es un sueno. Asi se ve la Semana 2.",
     offerValidFor: "Oferta especial valida solo por",
-    
+
     // Footer
     footerDisclaimer: "Este sitio no es parte de Facebook o Meta. Resultados individuales pueden variar. Este ebook es educativo y no garantiza ingresos especificos.",
     footerContact: "Contacto",
@@ -291,6 +299,7 @@ const translations = {
     secureCheckoutHotmart: "Secure checkout via Hotmart",
 
     // Pain Points
+    painIdentity: "There are two kinds of women who love baking: those who keep it as a hobby forever... and those who turn it into something more. You already know which one you want to be.",
     painEyebrow: "Sound familiar?",
     painTitle: "If you have wondered this, you are not alone...",
     painSubtitle: "These are the most common doubts and frustrations before getting thick, gooey, sellable cookies.",
@@ -444,7 +453,7 @@ const translations = {
     countryAustralia: "Australia",
 
     // Guarantee (Stronger Risk Reversal - Hotmart accurate)
-    guaranteeTitle: "Ironclad 7-Day Guarantee",
+    guaranteeTitle: "The First-Batch Guarantee",
     guaranteeSubtitle: "You Risk Nothing",
     guaranteeText: "Download the ebook. Bake the recipes. Follow the plan. If you do not feel confident starting your cookie business, request your refund directly through Hotmart - they process it in 24-48 hours. No questions, no hassle. You risk nothing.",
     guaranteeCta: "Get my copy now",
@@ -517,6 +526,13 @@ const translations = {
     finalBenefit5: "Risk-free 7-day guarantee",
     finalCtaButton: "Get my copy now",
     finalCtaNote: "Secure payment - Instant access - 7-day guarantee",
+    choiceTitle: "You have two choices right now:",
+    choiceA: "Close this page. Keep scrolling through baking videos. Tell yourself \"maybe someday.\" Six months from now, nothing has changed.",
+    choiceB: "Start today for $6.97. Bake your first batch tonight. Share them tomorrow. By next weekend, people are asking how to order.",
+    choiceQuestion: "Which one sounds like you?",
+    finalCtaPS: "P.S. When you download, go straight to Chapter 3 - that is where the best-selling cookie recipe is. Most women make their first batch that same evening.",
+    futurePacingTitle: "Picture This...",
+    futurePacingText: "It is Saturday morning. Your kitchen smells incredible - warm chocolate and vanilla filling the air. On the counter, 36 thick, gooey cookies are cooling on the rack. Your neighbor already texted to reserve a box. Your daughter peeks in and asks: \"Mom, can we make the peanut butter ones next?\" You snap a photo for Instagram, and before lunch, three friends have asked how to order. This is not a dream. This is what Week 2 looks like.",
     offerValidFor: "Special offer valid only for",
 
     // Footer
@@ -550,6 +566,7 @@ const translations = {
     secureCheckoutHotmart: "Pagamento seguro com Hotmart",
 
     // Pain Points
+    painIdentity: "Existem dois tipos de mulheres que amam assar: as que deixam como hobby para sempre... e as que transformam em algo mais. Voce ja sabe qual quer ser.",
     painEyebrow: "Isso soa familiar?",
     painTitle: "Se voce ja se perguntou isso, nao esta sozinha...",
     painSubtitle: "Estas sao as duvidas e frustracoes mais comuns antes de conseguir cookies grossos, cremosos e vendaveis.",
@@ -703,7 +720,7 @@ const translations = {
     countryAustralia: "Australia",
 
     // Guarantee (Stronger Risk Reversal - Hotmart accurate)
-    guaranteeTitle: "Garantia Blindada de 7 Dias",
+    guaranteeTitle: "A Garantia do Primeiro Lote",
     guaranteeSubtitle: "Voce Nao Arrisca Nada",
     guaranteeText: "Baixe o ebook. Asse as receitas. Siga o plano. Se voce nao sentir confianca para comecar seu negocio de cookies, solicite seu reembolso diretamente na Hotmart - eles processam em 24-48 horas. Sem perguntas, sem complicacao. Voce nao arrisca nada.",
     guaranteeCta: "Quero minha copia agora",
@@ -776,6 +793,13 @@ const translations = {
     finalBenefit5: "Garantia sem risco de 7 dias",
     finalCtaButton: "Quero minha copia agora",
     finalCtaNote: "Pagamento seguro - Acesso imediato - Garantia de 7 dias",
+    choiceTitle: "Voce tem duas escolhas agora:",
+    choiceA: "Fechar esta pagina. Continuar assistindo videos de confeitaria. Dizer \"um dia eu comeco.\" Daqui a seis meses, nada mudou.",
+    choiceB: "Comecar hoje por $6.97. Assar seu primeiro lote hoje a noite. Compartilhar amanha. No proximo fim de semana, as pessoas estao perguntando como encomendar.",
+    choiceQuestion: "Qual soa mais como voce?",
+    finalCtaPS: "P.S. Quando voce baixar, va direto ao Capitulo 3 - la esta a receita de cookie mais vendida. A maioria das mulheres faz o primeiro lote naquela mesma noite.",
+    futurePacingTitle: "Imagine Isso...",
+    futurePacingText: "E sabado de manha. Sua cozinha esta com um cheiro incrivel - chocolate quente e baunilha no ar. Na mesa, 36 cookies grossos e cremosos estao esfriando. Sua vizinha ja mandou mensagem para reservar uma caixa. Sua filha aparece e pergunta: \"Mae, podemos fazer os de pasta de amendoim?\" Voce tira uma foto para o Instagram, e antes do almoco, tres amigas perguntam como encomendar. Isso nao e um sonho. E assim que a Semana 2 se parece.",
     offerValidFor: "Oferta especial valida apenas por",
 
     // Footer
