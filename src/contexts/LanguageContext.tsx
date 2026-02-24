@@ -18,8 +18,8 @@ const translations = {
     priceIncreasesTo: "La oferta especial termina en",
     
     // Hero
-    heroTitle: "Haz Galletas NY y Emprende Paso a Paso Desde Casa en 7 Dias",
-    heroSubtitle: "Empieza a vender galletas estilo New York premium desde casa con 27 recetas probadas, un plan de ventas y solo $30 en ingredientes",
+    heroTitle: "Aprende a Hacer Galletas Estilo New York Perfectas — Gruesas, Altas y Cremosas Desde el Primer Intento",
+    heroSubtitle: "27 recetas paso a paso con tiempos, temperaturas y tecnicas exactas para lograr un centro cremoso y acabado de pasteleria premium — incluso si eres principiante",
     
     // Effort Minimizers (Hormozi)
     effortMinimizer1: "Solo $30 para empezar",
@@ -32,10 +32,10 @@ const translations = {
     secureCheckoutHotmart: "Pago seguro con Hotmart",
 
     // Pain Points
-    painIdentity: "Hay dos tipos de mujeres que aman hornear: las que lo dejan como pasatiempo para siempre... y las que lo convierten en algo mas. Tu ya sabes cual quieres ser.",
+    painIdentity: "Hay dos tipos de mujeres que aman hornear: las que siguen recetas al azar y esperan lo mejor... y las que aprenden el metodo detras de resultados de pasteleria. Tu ya sabes cual quieres ser.",
     painEyebrow: "Te suena familiar?",
-    painTitle: "Si te has preguntado esto, no estas sola...",
-    painSubtitle: "Estas son las dudas y frustraciones mas comunes antes de lograr cookies gruesas, cremosas y vendibles.",
+    painTitle: "Te pasa esto cuando intentas hacer galletas estilo New York?",
+    painSubtitle: "Estas son las frustraciones mas comunes antes de dominar cookies gruesas, cremosas y de calidad premium.",
     painQ1: "Amas hornear, pero no sabes como convertir ese amor en negocio?",
     painQ2: "Terminas perdiendo el tiempo y malgastando ingredientes con recetas de internet?",
     painQ3: "Te da miedo vender porque sientes que tienes que insistir para que te compren?",
@@ -249,7 +249,7 @@ const translations = {
     objection6Inside: "Incluye: fundamentos de marca, precios y presentacion.",
 
     // Final CTA
-    finalCtaTitle: "Tu Negocio de Galletas Empieza AHORA",
+    finalCtaTitle: "En 2 Horas, Tu Primer Lote Estara Enfriandose en la Mesa",
     finalCtaSubtitle: "En 2 horas, tu primer lote de galletas de calidad profesional estara enfriandose en la mesa",
     finalCtaRecap: "Todo lo que necesitas por solo $6.97:",
     finalBenefit1: "27 recetas probadas y vendibles",
@@ -285,8 +285,8 @@ const translations = {
     priceIncreasesTo: "Special offer ends in",
 
     // Hero
-    heroTitle: "Bake NY-Style Cookies and Start a Home Business in 7 Days",
-    heroSubtitle: "Start selling premium New York-style cookies from home with 27 tested recipes, a proven sales plan, and just $30 in ingredients",
+    heroTitle: "Learn to Make Perfect NY-Style Cookies — Thick, Tall, Gooey From Batch One",
+    heroSubtitle: "27 step-by-step recipes with exact times, temperatures, and techniques for a creamy center and bakery-quality finish — even if you are a complete beginner",
     
     // Effort Minimizers (Hormozi)
     effortMinimizer1: "Just $30 to start",
@@ -299,10 +299,10 @@ const translations = {
     secureCheckoutHotmart: "Secure checkout via Hotmart",
 
     // Pain Points
-    painIdentity: "There are two kinds of women who love baking: those who keep it as a hobby forever... and those who turn it into something more. You already know which one you want to be.",
+    painIdentity: "There are two kinds of women who love baking: those who follow random recipes and hope for the best... and those who learn the method behind bakery-quality results. You already know which one you want to be.",
     painEyebrow: "Sound familiar?",
-    painTitle: "If you have wondered this, you are not alone...",
-    painSubtitle: "These are the most common doubts and frustrations before getting thick, gooey, sellable cookies.",
+    painTitle: "Does this happen when you try to make NY-style cookies?",
+    painSubtitle: "These are the most common frustrations before mastering thick, gooey, bakery-quality cookies.",
     painQ1: "Do you love baking, but do not know how to turn it into a real business?",
     painQ2: "Have you wasted time and ingredients on random internet recipes?",
     painQ3: "Does selling scare you because it feels like you have to push people to buy?",
@@ -516,7 +516,7 @@ const translations = {
     objection6Inside: "Includes: brand fundamentals, pricing, and presentation.",
 
     // Final CTA
-    finalCtaTitle: "Your Cookie Business Starts NOW",
+    finalCtaTitle: "In 2 Hours, Your First Batch Will Be Cooling on the Counter",
     finalCtaSubtitle: "In 2 hours, your first batch of bakery-quality cookies will be cooling on the counter",
     finalCtaRecap: "Everything you need for just $6.97:",
     finalBenefit1: "27 tested, sellable recipes",
@@ -552,8 +552,8 @@ const translations = {
     priceIncreasesTo: "A oferta especial termina em",
 
     // Hero
-    heroTitle: "Faca Cookies Estilo NY e Comece um Negocio em Casa em 7 Dias",
-    heroSubtitle: "Comece a vender cookies estilo New York premium de casa com 27 receitas testadas, um plano de vendas e apenas $30 em ingredientes",
+    heroTitle: "Aprenda a Fazer Cookies Estilo New York Perfeitos — Grossos, Altos e Cremosos Desde a Primeira Fornada",
+    heroSubtitle: "27 receitas passo a passo com tempos, temperaturas e tecnicas exatas para um centro cremoso e acabamento de confeitaria premium — mesmo se voce for iniciante",
     
     // Effort Minimizers (Hormozi)
     effortMinimizer1: "Apenas $30 para comecar",
@@ -566,10 +566,10 @@ const translations = {
     secureCheckoutHotmart: "Pagamento seguro com Hotmart",
 
     // Pain Points
-    painIdentity: "Existem dois tipos de mulheres que amam assar: as que deixam como hobby para sempre... e as que transformam em algo mais. Voce ja sabe qual quer ser.",
+    painIdentity: "Existem dois tipos de mulheres que amam assar: as que seguem receitas aleatorias e esperam o melhor... e as que aprendem o metodo por tras de resultados de confeitaria. Voce ja sabe qual quer ser.",
     painEyebrow: "Isso soa familiar?",
-    painTitle: "Se voce ja se perguntou isso, nao esta sozinha...",
-    painSubtitle: "Estas sao as duvidas e frustracoes mais comuns antes de conseguir cookies grossos, cremosos e vendaveis.",
+    painTitle: "Isso acontece quando voce tenta fazer cookies estilo New York?",
+    painSubtitle: "Estas sao as frustracoes mais comuns antes de dominar cookies grossos, cremosos e de qualidade premium.",
     painQ1: "Voce ama assar, mas nao sabe como transformar esse amor em negocio?",
     painQ2: "Voce perde tempo e ingredientes testando receitas da internet que nao funcionam?",
     painQ3: "Vender te da medo porque parece que voce precisa insistir para as pessoas comprarem?",
@@ -783,7 +783,7 @@ const translations = {
     objection6Inside: "Inclui: fundamentos de marca, precos e apresentacao.",
 
     // Final CTA
-    finalCtaTitle: "Seu Negocio de Cookies Comeca AGORA",
+    finalCtaTitle: "Em 2 Horas, Sua Primeira Fornada Estara Esfriando na Mesa",
     finalCtaSubtitle: "Em 2 horas, seu primeiro lote de cookies de qualidade profissional estara esfriando na mesa",
     finalCtaRecap: "Tudo que voce precisa por apenas $6.97:",
     finalBenefit1: "27 receitas testadas e vendaveis",
