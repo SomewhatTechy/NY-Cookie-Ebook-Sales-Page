@@ -24,9 +24,9 @@ const HeroSection = ({ checkoutUrl }: HeroSectionProps) => {
   const currentVideoId = videoIds[language] ?? videoIds.en;
 
   const videoTitleByLang: Record<string, string> = {
-    en: 'How to Start Selling New York-Style Cookies From Home',
-    es: 'Cómo Empezar a Vender Galletas Estilo Nueva York Desde Casa',
-    pt: 'Como Começar a Vender Cookies Estilo Nova York em Casa',
+    en: 'How to Make Perfect New York-Style Cookies at Home',
+    es: 'Como Hacer Galletas Perfectas Estilo Nueva York en Casa',
+    pt: 'Como Fazer Cookies Perfeitos Estilo Nova York em Casa',
   };
   const videoTitle = videoTitleByLang[language] ?? videoTitleByLang.en;
 
