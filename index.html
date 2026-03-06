@@ -21,14 +21,7 @@
       fetchpriority="high"
     />
 
-    <!-- Preload hero mockup – responsive: 384/512/768/1024 -->
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset="/what-you-get/main-mockup-en-xs.webp 384w, /what-you-get/main-mockup-en-sm.webp 512w, /what-you-get/main-mockup-en-md.webp 768w, /what-you-get/main-mockup-en.webp 1024w"
-      imagesizes="(max-width: 420px) 384px, (max-width: 640px) 512px, (max-width: 1024px) 768px, 896px"
-      fetchpriority="high"
-    />
+    <!-- Hero mockup is below-the-fold (WhatYouGetSection), no preload needed -->
 
     <!-- Fonts (non-blocking) -->
     <link
@@ -150,7 +143,11 @@
     <!-- LCP placeholder: lives OUTSIDE #root so React can't destroy it -->
     <div id="lcp-placeholder" style="position:absolute;top:0;left:0;right:0;z-index:10;pointer-events:none">
       <div style="max-width:672px;margin:0 auto;padding:2rem 1rem 0;text-align:center">
-        <img src="https://img.youtube.com/vi/s00J5kiTMqY/maxresdefault.jpg" alt="Video" width="672" height="378"
+        <img
+          src="https://img.youtube.com/vi/s00J5kiTMqY/hqdefault.jpg"
+          srcset="https://img.youtube.com/vi/s00J5kiTMqY/hqdefault.jpg 480w, https://img.youtube.com/vi/s00J5kiTMqY/sddefault.jpg 640w, https://img.youtube.com/vi/s00J5kiTMqY/maxresdefault.jpg 1280w"
+          sizes="(max-width: 640px) 480px, (max-width: 1024px) 640px, 1280px"
+          alt="Video" width="672" height="378"
           fetchpriority="high" decoding="async"
           style="width:100%;height:auto;border-radius:1rem;aspect-ratio:16/9;object-fit:cover" />
       </div>
